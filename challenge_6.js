@@ -9,7 +9,7 @@ exports.SumOfASquare = SumOfASquare;
 function SumOfASquare(naturalNumbers) {
   this.naturalNumbers = naturalNumbers;
 
-  this.sumOfSquares = function() {
+  this.sumOfSquares = function () {
     let sumNsquared = 0;
     for (let i = 1; i <= this.naturalNumbers; i++) {
       sumNsquared += i ** 2;
@@ -17,7 +17,9 @@ function SumOfASquare(naturalNumbers) {
     return sumNsquared;
   };
 
-  this.squareOfTheSums = function() {
+  this.squareOfTheSums = function () {
+    // use the triangular number formula (squared) to perform calculation
+    // https://en.wikipedia.org/wiki/Triangular_number
     let squaredNsum =
       ((this.naturalNumbers * (this.naturalNumbers + 1)) / 2) ** 2;
     return squaredNsum;
